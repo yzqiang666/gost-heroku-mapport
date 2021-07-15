@@ -1,6 +1,6 @@
 FROM alpine:3.6
 
-ENV VER=2.11.1 SERVER=112.111.100.9:800
+ENV VER=2.11.1
 ENV TLS_PORT=4433 PORT=8080
 
 RUN apk add --no-cache curl \
