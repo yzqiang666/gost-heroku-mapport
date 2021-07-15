@@ -1,6 +1,6 @@
 FROM alpine:3.6
 
-ENV VER=2.11.1 METHOD=chacha20-ietf-poly1305 PASSWORD=yzqyzq1234
+ENV VER=2.11.1 SERVER=112.111.100.9:800
 ENV TLS_PORT=4433 PORT=8080
 
 RUN apk add --no-cache curl \
@@ -9,5 +9,5 @@ RUN apk add --no-cache curl \
 
 WORKDIR /gost
 EXPOSE ${TLS_PORT} $PORT
-CMD exec /gost/gost -L=tcp://:$PORT/112.111.100.9:800
+CMD exec /gost/gost -L=tcp://:$PORT/$SERVER
 
