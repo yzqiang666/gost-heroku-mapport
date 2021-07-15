@@ -5,7 +5,7 @@
   "env": {
     "SERVER": {
        "description": "SERVER:PORT",
-       "value": "112.111.100.9"
+       "value": "112.111.100.9:800"
      }
   },
   "stack": "container",
