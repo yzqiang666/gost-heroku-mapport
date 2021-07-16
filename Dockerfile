@@ -9,5 +9,12 @@ RUN apk add --no-cache curl \
 
 WORKDIR /gost
 EXPOSE ${TLS_PORT} $PORT
-CMD exec /gost/gost -L=tcp://:$PORT/$SERVER
 
+
+
+
+HOST=`echo $SERVER|awk -F ':' '{print $1}'`
+PPPP=`echo $SERVER|awk -F ':' '{print $2}'`
+[ "$PPPP" == "" ] && PPPP="80"
+
+CMD exec /gost/gost -L=tcp://:$PORT/$HOST:$PPPP -L=tcp://:$TLS_PORT/$HOST:443
