@@ -5,10 +5,10 @@
   "env": {
     "SERVER": {
        "description": "SERVER:PORT",
-       "value": "112.111.100.9:800"
+       "value": "example.com:80"
      }
   },
   "stack": "container",
-  "website": "https://github.com/xiaokaixuan/gost-heroku",
-  "repository": "https://github.com/xiaokaixuan/gost-heroku"
+  "website": "https://github.com/yzqiang666/gost-heroku-mapport",
+  "repository": "https://github.com/yzqiang666/gost-heroku-mapport"
  }
