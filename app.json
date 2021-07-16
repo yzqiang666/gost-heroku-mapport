@@ -6,7 +6,11 @@
     "SERVER": {
        "description": "SERVER:PORT",
        "value": "example.com:80"
-     }
+     },
+    "HTTPS_SERVER": {
+       "description": "HTTPS_SERVER:PORT",
+       "value": "example.com:443"
+     }    
   },
   "stack": "container",
   "website": "https://github.com/yzqiang666/gost-heroku-mapport",
