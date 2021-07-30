@@ -12,8 +12,8 @@ EXPOSE ${TLS_PORT} $PORT
 
 
 
-#CMD exec  /gost/gost -L=tcp://:$PORT/$SERVER -L=tcp://:$TLS_PORT/$HTTPS_SERVER
+CMD exec  /gost/gost -L=tcp://:$PORT/$SERVER -L=tcp://:$TLS_PORT/$HTTPS_SERVER
 
-CMD exec  /gost/gost -L=tcp://:$PORT/yzqiang.tk:800 -L=tcp://:$TLS_PORT/yzqiang.tk:4433
+
 
 
