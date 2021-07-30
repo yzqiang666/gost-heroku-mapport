@@ -10,6 +10,10 @@ RUN apk add --no-cache curl \
 WORKDIR /gost
 EXPOSE ${TLS_PORT} $PORT
 
+[ "${SERVER/:/}" == "$SERVER" ] && SERVER=$SERVER:80
+[ "${HTTPS_SERVER/:/}" == "$HTTPS_SERVER" ] && HTTPS_SERVER=$HTTPS_SERVER:80
+
+
 
 CMD exec /gost/gost -L=tcp://:$PORT/$SERVER -L=tcp://:$TLS_PORT/$HTTPS_SERVER
 
