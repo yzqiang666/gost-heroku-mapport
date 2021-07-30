@@ -15,5 +15,5 @@ EXPOSE ${TLS_PORT} $PORT
 
 
 
-CMD exec /gost/gost -L=tcp://:$PORT/$SERVER -L=tcp://:$TLS_PORT/$HTTPS_SERVER
+CMD exec [ "${SERVER/:/}" == "$SERVER" ] && SERVER=$SERVER:80 , [ "${HTTPS_SERVER/:/}" == "$HTTPS_SERVER" ] && HTTPS_SERVER=$HTTPS_SERVER:443 , /gost/gost -L=tcp://:$PORT/$SERVER -L=tcp://:$TLS_PORT/$HTTPS_SERVER
 
